@@ -1,8 +1,7 @@
 import 'dart:io';
 
 void main() {
-  print("Enter a floating number:");
-  double number = double.parse(stdin.readLineSync()!);
-  print("The entered num is $number");
+  print("Enter number:");
+  int? number = int.parse(stdin.readLineSync()!);
+  print("The entered number is ${number}");
 }
-//Solucionar el error  UnimplementedError: Global evaluation not currently supported

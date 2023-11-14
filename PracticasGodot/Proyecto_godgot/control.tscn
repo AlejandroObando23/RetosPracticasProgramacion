@@ -1,7 +1,42 @@
-[gd_scene format=3 uid="uid://sbn5uf6y7bj7"]
+[gd_scene load_steps=4 format=3 uid="uid://sbn5uf6y7bj7"]
+
+[ext_resource type="Script" path="res://codiguito.gd" id="1_6gock"]
+[ext_resource type="Texture2D" uid="uid://b44oxif8e34th" path="res://blue.jpg" id="1_50q6r"]
+[ext_resource type="Script" path="res://Codigop.gd" id="3_715g4"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_6gock")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -1.0
+offset_right = 1121.0
+offset_bottom = 602.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_50q6r")
+expand_mode = 1
+script = ExtResource("3_715g4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_right = 303.0
+offset_bottom = 104.0
+rotation = -0.000776611
+scale = Vector2(3.42913, 5.12628)
+text = "Hola mundo querido como esta la gente de mi psddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+vertical_alignment = 3
+autowrap_mode = 1
