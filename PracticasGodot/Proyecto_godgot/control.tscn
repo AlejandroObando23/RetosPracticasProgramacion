@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://sbn5uf6y7bj7"]
+[gd_scene load_steps=7 format=3 uid="uid://sbn5uf6y7bj7"]
 
 [ext_resource type="Script" path="res://codiguito.gd" id="1_6gock"]
-[ext_resource type="Texture2D" uid="uid://b44oxif8e34th" path="res://blue.jpg" id="1_50q6r"]
+[ext_resource type="Texture2D" uid="uid://ch0bygarmg5vk" path="res://Zodiacl.jpg" id="2_4i0v3"]
 [ext_resource type="Script" path="res://Codigop.gd" id="3_715g4"]
+[ext_resource type="Texture2D" uid="uid://lw4vragxqlf1" path="res://icon.svg" id="4_cgec5"]
+
+[sub_resource type="Theme" id="Theme_3ti3q"]
+
+[sub_resource type="FontVariation" id="FontVariation_ekd8p"]
+resource_local_to_scene = true
+variation_embolden = 2.0
+spacing_glyph = 1
+spacing_space = 5
+spacing_top = 1
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -27,16 +37,33 @@ offset_right = 1121.0
 offset_bottom = 602.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_50q6r")
+texture = ExtResource("2_4i0v3")
 expand_mode = 1
 script = ExtResource("3_715g4")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="Control/TextureRect"]
+texture_filter = 3
 layout_mode = 1
-offset_right = 303.0
-offset_bottom = 104.0
-rotation = -0.000776611
-scale = Vector2(3.42913, 5.12628)
-text = "Hola mundo querido como esta la gente de mi psddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-vertical_alignment = 3
+offset_left = 250.0
+offset_top = 5.0
+offset_right = 426.0
+offset_bottom = 71.0
+scale = Vector2(4, 5.98)
+theme = SubResource("Theme_3ti3q")
+theme_override_fonts/font = SubResource("FontVariation_ekd8p")
+theme_override_font_sizes/font_size = 5
+text = "Bienvenido en esta aplicacion podras saber que signo zodiacal eres"
 autowrap_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="Control/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.062
+offset_left = 482.0
+offset_top = 350.0
+offset_right = 589.575
+offset_bottom = 438.134
+texture_normal = ExtResource("4_cgec5")
+
+[connection signal="pressed" from="Control/TextureRect/TextureButton" to="." method="_on_texture_button_pressed"]
