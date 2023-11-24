@@ -1,18 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://sbn5uf6y7bj7"]
+[gd_scene load_steps=6 format=3 uid="uid://sbn5uf6y7bj7"]
 
 [ext_resource type="Script" path="res://codiguito.gd" id="1_6gock"]
 [ext_resource type="Texture2D" uid="uid://ch0bygarmg5vk" path="res://Zodiacl.jpg" id="2_4i0v3"]
 [ext_resource type="Script" path="res://Codigop.gd" id="3_715g4"]
 [ext_resource type="Texture2D" uid="uid://lw4vragxqlf1" path="res://icon.svg" id="4_cgec5"]
-
-[sub_resource type="Theme" id="Theme_3ti3q"]
-
-[sub_resource type="FontVariation" id="FontVariation_ekd8p"]
-resource_local_to_scene = true
-variation_embolden = 2.0
-spacing_glyph = 1
-spacing_space = 5
-spacing_top = 1
+[ext_resource type="FontFile" uid="uid://0epevncehnss" path="res://Sunday Morning.otf" id="4_kp8ib"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -27,32 +19,39 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
+self_modulate = Color(0.239216, 0.337255, 0.658824, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = -1.0
-offset_right = 1121.0
-offset_bottom = 602.0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 1125.0
+offset_bottom = 660.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_4i0v3")
 expand_mode = 1
+flip_h = true
+flip_v = true
 script = ExtResource("3_715g4")
 
 [node name="Label" type="Label" parent="Control/TextureRect"]
-texture_filter = 3
+light_mask = 327687
 layout_mode = 1
-offset_left = 250.0
-offset_top = 5.0
-offset_right = 426.0
-offset_bottom = 71.0
-scale = Vector2(4, 5.98)
-theme = SubResource("Theme_3ti3q")
-theme_override_fonts/font = SubResource("FontVariation_ekd8p")
-theme_override_font_sizes/font_size = 5
+offset_left = 32.0
+offset_top = 17.0
+offset_right = 303.0
+offset_bottom = 61.0
+scale = Vector2(4, 4)
+pivot_offset = Vector2(2, 0)
+theme_override_constants/shadow_offset_x = 500
+theme_override_constants/shadow_offset_y = 500
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("4_kp8ib")
+theme_override_font_sizes/font_size = 17
 text = "Bienvenido en esta aplicacion podras saber que signo zodiacal eres"
+horizontal_alignment = 1
 autowrap_mode = 1
 
 [node name="TextureButton" type="TextureButton" parent="Control/TextureRect"]
@@ -60,10 +59,22 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.035
 anchor_bottom = 0.062
-offset_left = 482.0
-offset_top = 350.0
-offset_right = 589.575
-offset_bottom = 438.134
+offset_left = 508.0
+offset_top = 431.0
+offset_right = 615.575
+offset_bottom = 519.134
 texture_normal = ExtResource("4_cgec5")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 246.0
+offset_right = 766.0
+offset_bottom = 330.0
+select_mode = 1
+item_count = 2
+max_columns = 4
+item_0/text = "xczczxc"
+item_1/text = "sadasdasdas"
 
 [connection signal="pressed" from="Control/TextureRect/TextureButton" to="." method="_on_texture_button_pressed"]
