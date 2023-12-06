@@ -1,23 +1,20 @@
 
+//Utilizar to String, lenght, contains
+//Utilizar un buscador de palabras en la que acepte minimo 40 caracteres y que contenga una palabra en especifico
+
 import 'dart:io';
- void main(List<String>arguments){
-  
 
-    print("Esta listo para comenzar este mini juego ");
-    print("1=Si   2=No");
-    int? user2=int.parse(stdin.readLineSync()!);
-    if(user2==1){
-        dynamic user=user2;
-        //TODO 
-        //Implmentar una biblioteca para tiempo para que se ejecute despues de pasar algunos minutos
-        print("Hey vamos a comenzar");
+void main(List<String> arguments) {
+  print("Hola, este programa ");
+  print(lectura());
+}
 
-    }
-    else{
-        print("Mala suerte :c");
-    }
-    
-
-    
-    
- }
+String? lectura() {
+  print("Escribe una prqueña oracion de 40 caracteres como minimo \n");
+  String? oracion = stdin.readLineSync();
+  print(oracion!.length);
+  while( oracion.length>=40)
+    print("Escribe una prqueña oracion de 40 caracteres como minimo \n");
+    oracion = stdin.readLineSync();
+  return oracion;
+}

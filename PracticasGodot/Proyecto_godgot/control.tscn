@@ -59,22 +59,44 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.035
 anchor_bottom = 0.062
-offset_left = 508.0
-offset_top = 431.0
-offset_right = 615.575
-offset_bottom = 519.134
+offset_left = 478.0
+offset_top = 440.0
+offset_right = 585.575
+offset_bottom = 528.134
 texture_normal = ExtResource("4_cgec5")
 
-[node name="ItemList" type="ItemList" parent="."]
+[node name="MenuBar" type="MenuBar" parent="Control/TextureRect"]
 layout_mode = 0
-offset_left = 437.0
-offset_top = 246.0
-offset_right = 766.0
-offset_bottom = 330.0
-select_mode = 1
-item_count = 2
-max_columns = 4
-item_0/text = "xczczxc"
-item_1/text = "sadasdasdas"
+offset_left = 414.0
+offset_top = 282.0
+offset_right = 875.0
+offset_bottom = 322.0
+start_index = 2
+language = "dsd"
+
+[node name="DropDown" type="OptionButton" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 225.0
+offset_right = 510.0
+offset_bottom = 297.0
+
+[node name="DropDown2" type="OptionButton" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 229.0
+offset_right = 813.0
+offset_bottom = 292.0
+
+[node name="Label2" type="Label" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 321.0
+offset_right = 680.0
+offset_bottom = 399.0
+text = "assss"
 
 [connection signal="pressed" from="Control/TextureRect/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="item_selected" from="Control/TextureRect/DropDown" to="." method="_on_drop_down_item_selected"]
+[connection signal="item_selected" from="Control/TextureRect/DropDown2" to="." method="_on_drop_down_2_item_selected"]
+[connection signal="focus_exited" from="Control/TextureRect/Label2" to="." method="_on_label_2_focus_exited"]

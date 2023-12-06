@@ -17,26 +17,59 @@
 import 'dart:io';
 import 'dart:math';
 
-void main()
-{
-  print("Bienvenido usuario a este juego de las matematicas");
-	print("Escriba su nombre?");
-	String? nombreuser = stdin.readLineSync();
-  print("Empezemosssss"); 
-  var valorRandom1 = Random().nextInt(10);
-  var valorRandom2 = Random().nextInt(10);
-  print("Resolver el ejercicio matematico \n $valorRandom1 + $valorRandom2");
-  var resu=valorRandom1+valorRandom2;
-  int?  user  = int.parse(stdin.readLineSync()!);
-  if(resu==user){
-    print("Lo has hecho muy bien sigue asi");
-  }
-  else{
-    print("Suerte para la proxima");
-  }
+void main() {
+  
+  var resu;
+  var user;
+  bool opera=true;
+  int? contador=0;
+ 
 
   
+  print("Bienvenido usuario a este juego de las matematicas");
+  print("Escriba su nombre?");
+  String? nombreuser = stdin.readLineSync();
+  print("Empezemosssss");
 
 
+  do{
+    contador = 1 + contador!;
+    var valorRandom1 = Random().nextInt(10);
+    var valorRandom2 = Random().nextInt(10);
+    var signonum= Random().nextInt(3);
+    switch(signonum){
+      case 1:
+        print("Resolver el ejercicio matematico \n $valorRandom1 + $valorRandom2");
+        var resu = valorRandom1 + valorRandom2;
+        var user = int.parse(stdin.readLineSync()!);
+        if(resu!=user){
+          opera=false;
+        }
+        break;
+      case 2:
+        print("Resolver el ejercicio matematico \n $valorRandom1 - $valorRandom2");
+        var resu = valorRandom1 - valorRandom2;
+        var user = int.parse(stdin.readLineSync()!);
+        if(resu!=user){
+          opera=false;
+        }
+        break;
+      case 3:
+        print("Resolver el ejercicio matematico \n $valorRandom1 * $valorRandom2");
+        var resu = valorRandom1 * valorRandom2;
+        var user = int.parse(stdin.readLineSync()!);
+        if(resu!=user){
+          opera=false;
+        }
+        break;
+    }
+    
 
-}
+    
+
+  }while (opera);
+
+  contador=-1+contador;
+  print("Felicidades $nombreuser has acertado $contador ");
+
+  }
