@@ -1,10 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://sbn5uf6y7bj7"]
+[gd_scene load_steps=17 format=3 uid="uid://sbn5uf6y7bj7"]
 
 [ext_resource type="Script" path="res://codiguito.gd" id="1_6gock"]
 [ext_resource type="Texture2D" uid="uid://ch0bygarmg5vk" path="res://Zodiacl.jpg" id="2_4i0v3"]
-[ext_resource type="Script" path="res://Codigop.gd" id="3_715g4"]
-[ext_resource type="Texture2D" uid="uid://lw4vragxqlf1" path="res://icon.svg" id="4_cgec5"]
+[ext_resource type="Texture2D" uid="uid://dkadk58vur44t" path="res://button.png" id="4_5urcs"]
 [ext_resource type="FontFile" uid="uid://0epevncehnss" path="res://Sunday Morning.otf" id="4_kp8ib"]
+[ext_resource type="Texture2D" uid="uid://bf73bytulsv0n" path="res://Imagenes de signos zodiacales/Aries.jpg" id="5_ijwdf"]
+[ext_resource type="Texture2D" uid="uid://85utk3pb4xo1" path="res://Imagenes de signos zodiacales/Tauro.jpg" id="6_i6mwr"]
+[ext_resource type="Texture2D" uid="uid://dk1wvgq0s71be" path="res://Imagenes de signos zodiacales/GeMINIS.jpg" id="7_unwes"]
+[ext_resource type="Texture2D" uid="uid://cff4p8g158jjy" path="res://Imagenes de signos zodiacales/Cancer.jpg" id="8_brjh6"]
+[ext_resource type="Texture2D" uid="uid://r4iyqbolxaj3" path="res://Imagenes de signos zodiacales/leo.jpg" id="9_dppg1"]
+[ext_resource type="Texture2D" uid="uid://cpwl5ona8jjds" path="res://Imagenes de signos zodiacales/virgo.jpg" id="10_g56jg"]
+[ext_resource type="Texture2D" uid="uid://bk5vmtkynxk5x" path="res://Imagenes de signos zodiacales/libra.jpg" id="11_xlnlv"]
+[ext_resource type="Texture2D" uid="uid://8wh0aeajyv2j" path="res://Imagenes de signos zodiacales/Escorpio.jpg" id="12_i3gcj"]
+[ext_resource type="Texture2D" uid="uid://dv72ax3udmu8w" path="res://Imagenes de signos zodiacales/saguitario.jpg" id="13_eaefq"]
+[ext_resource type="Texture2D" uid="uid://bqsbefg5rin38" path="res://Imagenes de signos zodiacales/capricornio.jpg" id="14_gwqcj"]
+[ext_resource type="Texture2D" uid="uid://dgtlv0yuhbc8e" path="res://Imagenes de signos zodiacales/acuario.jpg" id="15_ed2m1"]
+[ext_resource type="Texture2D" uid="uid://dinmv1ixqf0u0" path="res://Imagenes de signos zodiacales/piscis.jpg" id="16_xjali"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -34,7 +45,6 @@ texture = ExtResource("2_4i0v3")
 expand_mode = 1
 flip_h = true
 flip_v = true
-script = ExtResource("3_715g4")
 
 [node name="Label" type="Label" parent="Control/TextureRect"]
 light_mask = 327687
@@ -59,11 +69,12 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.035
 anchor_bottom = 0.062
-offset_left = 478.0
-offset_top = 440.0
-offset_right = 585.575
-offset_bottom = 528.134
-texture_normal = ExtResource("4_cgec5")
+offset_left = 429.0
+offset_top = 509.0
+offset_right = 545.575
+offset_bottom = 512.91
+scale = Vector2(1.31727, 1.45682)
+texture_normal = ExtResource("4_5urcs")
 
 [node name="MenuBar" type="MenuBar" parent="Control/TextureRect"]
 layout_mode = 0
@@ -89,14 +100,131 @@ offset_right = 813.0
 offset_bottom = 292.0
 
 [node name="Label2" type="Label" parent="Control/TextureRect"]
+visible = false
 layout_mode = 0
-offset_left = 405.0
-offset_top = 321.0
-offset_right = 680.0
-offset_bottom = 399.0
+offset_left = 495.0
+offset_top = 461.0
+offset_right = 770.0
+offset_bottom = 507.0
 text = "assss"
+
+[node name="Label3" type="Label" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 310.0
+offset_right = 642.0
+offset_bottom = 343.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/TextureRect"]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 351.0
+offset_right = 1633.0
+offset_bottom = 1026.0
+scale = Vector2(0.200304, 0.177092)
+
+[node name="imagen1" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.67
+anchor_bottom = 0.647
+offset_left = -154.765
+offset_top = -39.5273
+offset_right = 241.235
+offset_bottom = 198.748
+texture = ExtResource("5_ijwdf")
+
+[node name="imagen2" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 24.9618
+offset_top = -33.8807
+offset_right = 64.9618
+offset_bottom = 6.11926
+scale = Vector2(1.85073, 1.20596)
+texture = ExtResource("6_i6mwr")
+
+[node name="imagen3" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3.59605, 3.25872)
+texture = ExtResource("7_unwes")
+
+[node name="imagen4" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1, 0.548264)
+texture = ExtResource("8_brjh6")
+
+[node name="imagen5" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.699005, 0.999986)
+texture = ExtResource("9_dppg1")
+
+[node name="imagen6" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3.50016, 3.55942)
+texture = ExtResource("10_g56jg")
+
+[node name="imagen7" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.838302, 0.913125)
+texture = ExtResource("11_xlnlv")
+
+[node name="imagen8" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3.29849, 3.3738)
+texture = ExtResource("12_i3gcj")
+
+[node name="imagen9" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.740012, 0.984178)
+texture = ExtResource("13_eaefq")
+
+[node name="imagen10" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("14_gwqcj")
+
+[node name="imagen11" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.834398, 0.84819)
+texture = ExtResource("15_ed2m1")
+
+[node name="imagen12" type="TextureRect" parent="Control/TextureRect/TextureRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("16_xjali")
 
 [connection signal="pressed" from="Control/TextureRect/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="item_selected" from="Control/TextureRect/DropDown" to="." method="_on_drop_down_item_selected"]
 [connection signal="item_selected" from="Control/TextureRect/DropDown2" to="." method="_on_drop_down_2_item_selected"]
 [connection signal="focus_exited" from="Control/TextureRect/Label2" to="." method="_on_label_2_focus_exited"]
+[connection signal="visibility_changed" from="Control/TextureRect/TextureRect/imagen1" to="." method="_on_imagen_1_visibility_changed"]

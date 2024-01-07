@@ -6,15 +6,26 @@ import 'dart:io';
 
 void main(List<String> arguments) {
   print("Hola, este programa ");
+  print("Tienes que adivinar en que palabra estoy pensando y ponerlo en una oracion de minimo de 40 palabras");
+  print("Si aciertas que palabra estoy pensando ganaras");
   print(lectura());
 }
 
 String? lectura() {
   print("Escribe una prqueña oracion de 40 caracteres como minimo \n");
   String? oracion = stdin.readLineSync();
-  print(oracion!.length);
-  while( oracion.length>=40)
+  String? mensaje;
+  while( 40>=oracion!.length){
     print("Escribe una prqueña oracion de 40 caracteres como minimo \n");
     oracion = stdin.readLineSync();
-  return oracion;
+  }
+  bool encontar=oracion.contains("flor");
+  if(encontar){
+    mensaje="FELICIDADES \n Has encontrado la palabra que he estado pensando \n La palabra secreta era flor" ; 
+  } 
+  else{
+  mensaje ="Losiento has perdido espero que podamos jugar este juego otra vez";
+  }
+  
+  return mensaje;
 }
